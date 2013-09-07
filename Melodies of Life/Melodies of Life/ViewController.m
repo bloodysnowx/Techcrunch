@@ -16,13 +16,7 @@
 
 @implementation ViewController
 
-- (void)playChar:(const char* const)path WillDelegate:(BOOL)flag
-{
-    NSURL* fileURL = [self getURLfromBundleChar:path];
-    [self play:fileURL WillDelegate:flag];
-}
-
-- (void)play:(NSURL*)fileURL WillDelegate:(BOOL)flag
+- (void)playURL:(NSURL*)fileURL WillDelegate:(BOOL)flag
 {
     [NSObject cancelPreviousPerformRequestsWithTarget:self];
     player = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
@@ -31,10 +25,10 @@
     [player play];
 }
 
-- (NSURL*)getURLfromBundleChar:(const char* const)path
+- (void)play:(NSString*)fileName WillDelegate:(BOOL)flag
 {
-    NSString* str = [NSString stringWithCString:path encoding:NSASCIIStringEncoding];
-    return [self getURLfromBundle:str];
+    NSURL* fileURL = [self getURLfromBundle:fileName];
+    [self playURL:fileURL WillDelegate:flag];
 }
 
 - (NSURL*)getURLfromBundle:(NSString*)path
@@ -44,26 +38,14 @@
     return [NSURL fileURLWithPath:filePath];
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 -(IBAction)button1Pressed:(id)sender
 {
-    [self play:[self getURLfromBundle:@"0645"] WillDelegate:NO];
+    [self play:@"0645" WillDelegate:NO];
 }
 
 -(IBAction)button2Pressed:(id)sender
 {
-    [self play:[self getURLfromBundle:@"horn1"] WillDelegate:NO];
+    [self play:@"horn1" WillDelegate:NO];
 }
 
 @end
