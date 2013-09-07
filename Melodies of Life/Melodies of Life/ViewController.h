@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<AVAudioPlayerDelegate>
+
+-(IBAction)button1Pressed:(id)sender;
+-(IBAction)button2Pressed:(id)sender;
 
 @end

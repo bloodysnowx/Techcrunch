@@ -19,6 +19,11 @@
 		0D07F45E17DBE6590032FEBE /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D07F45C17DBE6590032FEBE /* MainStoryboard_iPhone.storyboard */; };
 		0D07F46117DBE6590032FEBE /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D07F45F17DBE6590032FEBE /* MainStoryboard_iPad.storyboard */; };
 		0D07F46417DBE6590032FEBE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D07F46317DBE6590032FEBE /* ViewController.m */; };
+		0D07F46B17DBE9FF0032FEBE /* DSC_0459.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D07F46A17DBE9FF0032FEBE /* DSC_0459.jpg */; };
+		0D07F46D17DBEA3F0032FEBE /* DSC_0454.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D07F46C17DBEA3F0032FEBE /* DSC_0454.jpg */; };
+		0D07F46F17DBEE030032FEBE /* 0645.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0D07F46E17DBEE030032FEBE /* 0645.mp3 */; };
+		0D07F47117DBEE140032FEBE /* horn1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0D07F47017DBEE140032FEBE /* horn1.mp3 */; };
+		0D07F47317DBEEC00032FEBE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D07F47217DBEEC00032FEBE /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +44,11 @@
 		0D07F46017DBE6590032FEBE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		0D07F46217DBE6590032FEBE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		0D07F46317DBE6590032FEBE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0D07F46A17DBE9FF0032FEBE /* DSC_0459.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DSC_0459.jpg; sourceTree = "<group>"; };
+		0D07F46C17DBEA3F0032FEBE /* DSC_0454.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DSC_0454.jpg; sourceTree = "<group>"; };
+		0D07F46E17DBEE030032FEBE /* 0645.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 0645.mp3; sourceTree = "<group>"; };
+		0D07F47017DBEE140032FEBE /* horn1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = horn1.mp3; sourceTree = "<group>"; };
+		0D07F47217DBEEC00032FEBE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D07F47317DBEEC00032FEBE /* AVFoundation.framework in Frameworks */,
 				0D07F44517DBE6580032FEBE /* UIKit.framework in Frameworks */,
 				0D07F44717DBE6580032FEBE /* Foundation.framework in Frameworks */,
 				0D07F44917DBE6580032FEBE /* CoreGraphics.framework in Frameworks */,
@@ -75,6 +86,7 @@
 		0D07F44317DBE6580032FEBE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0D07F47217DBEEC00032FEBE /* AVFoundation.framework */,
 				0D07F44417DBE6580032FEBE /* UIKit.framework */,
 				0D07F44617DBE6580032FEBE /* Foundation.framework */,
 				0D07F44817DBE6580032FEBE /* CoreGraphics.framework */,
@@ -99,6 +111,10 @@
 		0D07F44B17DBE6580032FEBE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0D07F47017DBEE140032FEBE /* horn1.mp3 */,
+				0D07F46E17DBEE030032FEBE /* 0645.mp3 */,
+				0D07F46A17DBE9FF0032FEBE /* DSC_0459.jpg */,
+				0D07F46C17DBEA3F0032FEBE /* DSC_0454.jpg */,
 				0D07F44C17DBE6580032FEBE /* Melodies of Life-Info.plist */,
 				0D07F44D17DBE6580032FEBE /* InfoPlist.strings */,
 				0D07F45017DBE6590032FEBE /* main.m */,
@@ -167,6 +183,10 @@
 				0D07F45B17DBE6590032FEBE /* Default-568h@2x.png in Resources */,
 				0D07F45E17DBE6590032FEBE /* MainStoryboard_iPhone.storyboard in Resources */,
 				0D07F46117DBE6590032FEBE /* MainStoryboard_iPad.storyboard in Resources */,
+				0D07F46B17DBE9FF0032FEBE /* DSC_0459.jpg in Resources */,
+				0D07F46D17DBEA3F0032FEBE /* DSC_0454.jpg in Resources */,
+				0D07F46F17DBEE030032FEBE /* 0645.mp3 in Resources */,
+				0D07F47117DBEE140032FEBE /* horn1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
