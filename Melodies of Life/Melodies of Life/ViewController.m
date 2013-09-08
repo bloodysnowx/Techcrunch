@@ -73,24 +73,34 @@
               ];
 }
 
-- (void)setupAudio
+-(void)setupAudio1
 {
     NSURL *url1 = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"0645" ofType:@"mp3"]];
     player1 = [[AVAudioPlayer alloc] initWithContentsOfURL:url1 error:nil];
     player1.volume = 0.2f;
-    
+
+}
+
+-(void)setupAudio2
+{
     NSURL *url2 = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"horn1" ofType:@"mp3"]];
     player2 = [[AVAudioPlayer alloc] initWithContentsOfURL:url2 error:nil];
     player2.volume = 0.3f;
 }
 
+- (void)setupAudio
+{
+    [self setupAudio1];
+    [self setupAudio2];
+}
+
 - (void)play:(NSInteger)type
 {
     if (type == 0) {
-        //[player1 prepareToPlay];
+        [self setupAudio1];
         [player1 play];
     } else {
-        //[player2 prepareToPlay];
+        [self setupAudio2];
         [player2 play];
     }
 }
