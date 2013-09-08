@@ -11,6 +11,7 @@
 @interface ViewController ()
 {
     AVAudioPlayer* player;
+    NSMutableArray* imageViews;
 }
 @end
 
@@ -70,7 +71,7 @@
 
 -(void)moveImageView:(UIImageView*)imageView
 {
-    int x = imageView.frame.origin.x - 1;
+    int x = imageView.frame.origin.x - 2;
     if(x < -imageView.frame.size.width) x = 320;
     imageView.frame = (CGRect){ x, imageView.frame.origin.y, imageView.frame.size };
 }
@@ -86,11 +87,22 @@
     [super viewWillAppear:animated];
 }
 
+-(void)countDown:(NSNumber*)count
+{
+    [self.startButton setTitle:[NSString stringWithFormat:@"%@", count] forState:UIControlStateNormal];
+    if([count integerValue] == 0) {
+        self.startButton.hidden = YES;
+        self.imageView1.hidden = self.imageView2.hidden = NO;
+        [NSTimer scheduledTimerWithTimeInterval:0.0075f target:self selector:@selector(moveImageViews) userInfo:nil repeats:YES];
+    }
+    else {
+        [self performSelector:@selector(countDown:) withObject:@([count integerValue] - 1) afterDelay:1];
+    }
+}
+
 -(IBAction)startButtonPressed:(id)sender
 {
-    self.startButton.hidden = YES;
-    self.imageView1.hidden = self.imageView2.hidden = NO;
-    [NSTimer scheduledTimerWithTimeInterval:0.005f target:self selector:@selector(moveImageViews) userInfo:nil repeats:YES];
+    [self countDown:@3];
 }
 
 @end
