@@ -41,11 +41,30 @@
 -(IBAction)button1Pressed:(id)sender
 {
     [self play:@"0645" WillDelegate:NO];
+    [self judgePoint:self.imageView1 label:self.label1];
 }
 
 -(IBAction)button2Pressed:(id)sender
 {
     [self play:@"horn1" WillDelegate:NO];
+    [self judgePoint:self.imageView2 label:self.label2];
+}
+
+-(void)judgePoint:(UIImageView*)imageView label:(UILabel*)label
+{
+    int diff = imageView.frame.origin.x - 24;
+    diff = diff / 10;
+    if(abs(diff) < 1) label.text = @"Perfect!";
+    else if(abs(diff) < 2) label.text = @"Great!";
+    else if(abs(diff) < 4) label.text = @"good";
+    else label.text = @"bad";
+
+    [self performSelector:@selector(clearLabel:) withObject:label afterDelay:0.5];
+}
+
+-(void)clearLabel:(UILabel*)label
+{
+    label.text = @"";
 }
 
 -(void)moveImageView:(UIImageView*)imageView

@@ -46,34 +46,67 @@
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="DSC_0459_m.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hNO-dd-79B">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="132" id="GeY-aO-rIH"/>
-                                    <constraint firstAttribute="height" constant="74" id="fs0-kc-Ex6"/>
+                                    <constraint firstAttribute="height" constant="50" id="eC3-sn-a4y"/>
+                                    <constraint firstAttribute="width" constant="90" id="geA-Gm-luv"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="DSC_0454_m.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="2jc-BW-auL">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="132" id="91Q-Lr-DMQ"/>
-                                    <constraint firstAttribute="height" constant="71" id="mVG-Zi-w3S"/>
+                                    <constraint firstAttribute="height" constant="50" id="FQG-4t-r8s"/>
+                                    <constraint firstAttribute="width" constant="90" id="Pur-l8-U9w"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kjt-Pd-8bB">
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="153" id="B8D-kk-ftd"/>
+                                    <constraint firstAttribute="width" constant="9" id="GNj-pb-CgB"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEo-R9-81K">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="OGG-Df-4CH"/>
+                                    <constraint firstAttribute="width" constant="70" id="knt-hg-t0h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbH-Qt-JyX">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="iAx-j8-ox6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="BEo-R9-81K" firstAttribute="top" secondItem="kjt-Pd-8bB" secondAttribute="top" type="default" id="3Bl-V8-Jhf"/>
                             <constraint firstAttribute="trailing" secondItem="6oq-eF-eQa" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="9GC-pr-jvi"/>
-                            <constraint firstAttribute="trailing" secondItem="hNO-dd-79B" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="9ih-o1-r80"/>
+                            <constraint firstItem="CbH-Qt-JyX" firstAttribute="leading" secondItem="kjt-Pd-8bB" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Afi-iw-MBm"/>
                             <constraint firstItem="Pjb-o2-3vL" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="EDX-xH-M5m"/>
+                            <constraint firstAttribute="trailing" secondItem="hNO-dd-79B" secondAttribute="trailing" constant="1" id="Jxr-dR-0Xl"/>
                             <constraint firstAttribute="bottom" secondItem="2jc-BW-auL" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="OQn-wf-3WE"/>
+                            <constraint firstAttribute="bottom" secondItem="CbH-Qt-JyX" secondAttribute="bottom" constant="70" id="OeA-T8-hNC"/>
                             <constraint firstItem="6oq-eF-eQa" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="QfP-hX-ASd"/>
                             <constraint firstItem="6oq-eF-eQa" firstAttribute="top" secondItem="3" secondAttribute="top" constant="198" id="Tqh-7d-VqG"/>
-                            <constraint firstItem="2jc-BW-auL" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="48" id="eD1-r3-0hY"/>
-                            <constraint firstItem="2jc-BW-auL" firstAttribute="top" secondItem="hNO-dd-79B" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="gPQ-w2-plJ"/>
+                            <constraint firstItem="kjt-Pd-8bB" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="V8i-Mt-aHM"/>
+                            <constraint firstItem="CbH-Qt-JyX" firstAttribute="top" secondItem="hNO-dd-79B" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="bxQ-KT-f7v"/>
+                            <constraint firstItem="BEo-R9-81K" firstAttribute="trailing" secondItem="CbH-Qt-JyX" secondAttribute="trailing" type="default" id="gm7-ap-ttI"/>
                             <constraint firstItem="Pjb-o2-3vL" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="hGR-Sp-bml"/>
+                            <constraint firstAttribute="bottom" secondItem="kjt-Pd-8bB" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="hyS-MF-9jk"/>
                             <constraint firstAttribute="trailing" secondItem="Pjb-o2-3vL" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="lNL-aJ-Wlq"/>
+                            <constraint firstItem="2jc-BW-auL" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="97" id="pna-d8-QpS"/>
+                            <constraint firstItem="BEo-R9-81K" firstAttribute="leading" secondItem="kjt-Pd-8bB" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="zap-HE-nBD"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView1" destination="hNO-dd-79B" id="FKD-s3-2hi"/>
                         <outlet property="imageView2" destination="2jc-BW-auL" id="AnF-3d-cnl"/>
+                        <outlet property="label1" destination="BEo-R9-81K" id="kNf-WE-OkN"/>
+                        <outlet property="label2" destination="CbH-Qt-JyX" id="1yf-BE-zXY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -86,6 +119,22 @@
         <image name="DSC_0459.jpg" width="3920" height="2204"/>
         <image name="DSC_0459_m.jpg" width="280" height="157"/>
     </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="button1Pressed:"/>
+                <relationship kind="action" name="button2Pressed:"/>
+                <relationship kind="outlet" name="imageView1" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="imageView2" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="label1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="label2" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
