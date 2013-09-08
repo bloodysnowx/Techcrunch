@@ -26,7 +26,12 @@
 		0D07F47317DBEEC00032FEBE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D07F47217DBEEC00032FEBE /* AVFoundation.framework */; };
 		0D07F47517DBF5FE0032FEBE /* DSC_0454_m.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D07F47417DBF5FE0032FEBE /* DSC_0454_m.jpg */; };
 		0D07F47717DBF6090032FEBE /* DSC_0459_m.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D07F47617DBF6090032FEBE /* DSC_0459_m.jpg */; };
+		691DE65E17DC78B30046F90A /* bipple.png in Resources */ = {isa = PBXBuildFile; fileRef = 691DE65D17DC78B30046F90A /* bipple.png */; };
+		691DE66117DCA33E0046F90A /* circle2.png in Resources */ = {isa = PBXBuildFile; fileRef = 691DE65F17DCA33E0046F90A /* circle2.png */; };
+		691DE66217DCA33E0046F90A /* circle1.png in Resources */ = {isa = PBXBuildFile; fileRef = 691DE66017DCA33E0046F90A /* circle1.png */; };
 		693E6A5317DC475D0041CDEB /* GmUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 699D9C8D17DC42A10047B18A /* GmUtil.m */; };
+		693E6A5617DC6C580041CDEB /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 693E6A5517DC6C580041CDEB /* MediaPlayer.framework */; };
+		693E6A5817DC6F620041CDEB /* tetris.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 693E6A5717DC6D750041CDEB /* tetris.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +59,11 @@
 		0D07F47217DBEEC00032FEBE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0D07F47417DBF5FE0032FEBE /* DSC_0454_m.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DSC_0454_m.jpg; sourceTree = "<group>"; };
 		0D07F47617DBF6090032FEBE /* DSC_0459_m.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DSC_0459_m.jpg; sourceTree = "<group>"; };
+		691DE65D17DC78B30046F90A /* bipple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bipple.png; sourceTree = "<group>"; };
+		691DE65F17DCA33E0046F90A /* circle2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle2.png; sourceTree = "<group>"; };
+		691DE66017DCA33E0046F90A /* circle1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle1.png; sourceTree = "<group>"; };
+		693E6A5517DC6C580041CDEB /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		693E6A5717DC6D750041CDEB /* tetris.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = tetris.mp4; sourceTree = "<group>"; };
 		699D9C8D17DC42A10047B18A /* GmUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GmUtil.m; sourceTree = "<group>"; };
 		699D9C8E17DC42A10047B18A /* GmUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GmUtil.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				693E6A5617DC6C580041CDEB /* MediaPlayer.framework in Frameworks */,
 				0D07F47317DBEEC00032FEBE /* AVFoundation.framework in Frameworks */,
 				0D07F44517DBE6580032FEBE /* UIKit.framework in Frameworks */,
 				0D07F44717DBE6580032FEBE /* Foundation.framework in Frameworks */,
@@ -76,6 +87,7 @@
 		0D07F43817DBE6580032FEBE = {
 			isa = PBXGroup;
 			children = (
+				693E6A5517DC6C580041CDEB /* MediaPlayer.framework */,
 				0D07F44A17DBE6580032FEBE /* Melodies of Life */,
 				0D07F44317DBE6580032FEBE /* Frameworks */,
 				0D07F44217DBE6580032FEBE /* Products */,
@@ -120,6 +132,10 @@
 		0D07F44B17DBE6580032FEBE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				691DE65F17DCA33E0046F90A /* circle2.png */,
+				691DE66017DCA33E0046F90A /* circle1.png */,
+				691DE65D17DC78B30046F90A /* bipple.png */,
+				693E6A5717DC6D750041CDEB /* tetris.mp4 */,
 				0D07F47017DBEE140032FEBE /* horn1.mp3 */,
 				0D07F46E17DBEE030032FEBE /* 0645.mp3 */,
 				0D07F47417DBF5FE0032FEBE /* DSC_0454_m.jpg */,
@@ -188,6 +204,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				693E6A5817DC6F620041CDEB /* tetris.mp4 in Resources */,
 				0D07F44F17DBE6580032FEBE /* InfoPlist.strings in Resources */,
 				0D07F45717DBE6590032FEBE /* Default.png in Resources */,
 				0D07F45917DBE6590032FEBE /* Default@2x.png in Resources */,
@@ -200,6 +217,9 @@
 				0D07F47117DBEE140032FEBE /* horn1.mp3 in Resources */,
 				0D07F47517DBF5FE0032FEBE /* DSC_0454_m.jpg in Resources */,
 				0D07F47717DBF6090032FEBE /* DSC_0459_m.jpg in Resources */,
+				691DE65E17DC78B30046F90A /* bipple.png in Resources */,
+				691DE66117DCA33E0046F90A /* circle2.png in Resources */,
+				691DE66217DCA33E0046F90A /* circle1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
