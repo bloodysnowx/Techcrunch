@@ -48,16 +48,23 @@
     [self play:@"horn1" WillDelegate:NO];
 }
 
--(void)moveImageView1
+-(void)moveImageView:(UIImageView*)imageView
 {
-    self.imageView1.frame = (CGRect){ ((int)self.imageView1.frame.origin.x - 1 + 320) % 320, self.imageView1.frame.origin.y, self.imageView1.frame.size };
-    self.imageView2.frame = (CGRect){ ((int)self.imageView2.frame.origin.x - 1 + 320) % 320, self.imageView2.frame.origin.y, self.imageView2.frame.size };
+    int x = imageView.frame.origin.x - 1;
+    if(x < -imageView.frame.size.width) x = 320;
+    imageView.frame = (CGRect){ x, imageView.frame.origin.y, imageView.frame.size };
+}
+
+-(void)moveImageViews
+{
+    [self moveImageView:self.imageView1];
+    [self moveImageView:self.imageView2];
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [NSTimer scheduledTimerWithTimeInterval:0.01f target:self selector:@selector(moveImageView1) userInfo:nil repeats:YES];
+    [NSTimer scheduledTimerWithTimeInterval:0.01f target:self selector:@selector(moveImageViews) userInfo:nil repeats:YES];
 }
 
 @end
