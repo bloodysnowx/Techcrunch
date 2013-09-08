@@ -41,33 +41,33 @@
   @{@"duration":@3.471449, @"type": @1},
   @{@"duration":@4.237781, @"type": @0},
   @{@"duration":@5.061984, @"type": @0},
-  @{@"duration":@5.793411, @"type": @0},
+  @{@"duration":@5.793411, @"type": @1},
   @{@"duration":@6.710620, @"type": @0},
-  @{@"duration":@8.312818, @"type": @0},
+  @{@"duration":@8.312818, @"type": @1},
   @{@"duration":@9.044172, @"type": @0},
-  @{@"duration":@9.857301, @"type": @0},
+  @{@"duration":@9.857301, @"type": @1},
   @{@"duration":@10.669471, @"type": @0},
-  @{@"duration":@11.656390, @"type": @0},
+  @{@"duration":@11.656390, @"type": @1},
   @{@"duration":@12.318046, @"type": @0},
-  @{@"duration":@13.003049, @"type": @0},
+  @{@"duration":@13.003049, @"type": @1},
   @{@"duration":@14.709781, @"type": @0},
-  @{@"duration":@15.394612, @"type": @0},
+  @{@"duration":@15.394612, @"type": @1},
   @{@"duration":@16.242636, @"type": @0},
-  @{@"duration":@17.089748, @"type": @0},
+  @{@"duration":@17.089748, @"type": @1},
   @{@"duration":@17.844327, @"type": @0},
   @{@"duration":@18.703439, @"type": @0},
   @{@"duration":@19.434877, @"type": @0},
-  @{@"duration":@20.189686, @"type": @0},
+  @{@"duration":@20.189686, @"type": @1},
   @{@"duration":@21.048668, @"type": @0},
   @{@"duration":@21.803149, @"type": @0},
-  @{@"duration":@22.604252, @"type": @0},
+  @{@"duration":@22.604252, @"type": @1},
   @{@"duration":@23.347251, @"type": @0},
   @{@"duration":@24.171720, @"type": @0},
-  @{@"duration":@24.949583, @"type": @0},
+  @{@"duration":@24.949583, @"type": @1},
   @{@"duration":@25.727314, @"type": @0},
-  @{@"duration":@26.540042, @"type": @0},
+  @{@"duration":@26.540042, @"type": @1},
   @{@"duration":@27.329568, @"type": @0},
-  @{@"duration":@28.281469, @"type": @0},
+  @{@"duration":@28.281469, @"type": @1},
   @{@"duration":@29.012878, @"type": @0},
   @{@"duration":@29.860427, @"type": @0},
               ];
@@ -77,7 +77,7 @@
 {
     NSURL *url1 = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"0645" ofType:@"mp3"]];
     player1 = [[AVAudioPlayer alloc] initWithContentsOfURL:url1 error:nil];
-    player1.volume = 0.3f;
+    player1.volume = 0.2f;
     
     NSURL *url2 = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"horn1" ofType:@"mp3"]];
     player2 = [[AVAudioPlayer alloc] initWithContentsOfURL:url2 error:nil];
@@ -167,10 +167,10 @@
 	
 -(void)moveImageView:(UIImageView*)imageView
 {
-    int x = imageView.frame.origin.x - 2;
+    int x = imageView.frame.origin.x - 5;
     imageView.frame = (CGRect){ x, imageView.frame.origin.y, imageView.frame.size };
     if(x < -imageView.frame.size.width) {
-        //[imageViews removeObject:imageView];
+        [imageViews removeObject:imageView];
         [imageView removeFromSuperview];
     }
 }
@@ -179,7 +179,9 @@
 {
     //[self moveImageView:self.imageView1];
     //[self moveImageView:self.imageView2];
-    for (UIImageView *iv in imageViews) {
+    for (int i = imageViews.count - 1; i >= 0; --i)
+    {
+        UIImageView* iv = imageViews[i];
         [self moveImageView:iv];
     }
 }
@@ -203,7 +205,7 @@
     if([count integerValue] == 0) {
         self.startButton.hidden = YES;
         self.imageView1.hidden = self.imageView2.hidden = NO;
-        [NSTimer scheduledTimerWithTimeInterval:0.0075f target:self selector:@selector(moveImageViews) userInfo:nil repeats:YES];
+        //[NSTimer scheduledTimerWithTimeInterval:0.0075f target:self selector:@selector(moveImageViews) userInfo:nil repeats:YES];
         [self startGame];
     }
     else {
@@ -240,7 +242,7 @@
 
 - (void)startTimer
 {
-    theTimer = [NSTimer scheduledTimerWithTimeInterval:0.01666f target:self selector:@selector(frameProc:) userInfo:nil repeats:YES];
+    theTimer = [NSTimer scheduledTimerWithTimeInterval:0.01666f * 2 target:self selector:@selector(frameProc:) userInfo:nil repeats:YES];
 }
 
 - (void)putImageViews
