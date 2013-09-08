@@ -20,6 +20,7 @@
 {
     [NSObject cancelPreviousPerformRequestsWithTarget:self];
     player = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
+    player.volume = 0.3f;
     player.delegate = flag ? self : nil;
     [player prepareToPlay];
     [player play];
@@ -83,7 +84,13 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [NSTimer scheduledTimerWithTimeInterval:0.01f target:self selector:@selector(moveImageViews) userInfo:nil repeats:YES];
+}
+
+-(IBAction)startButtonPressed:(id)sender
+{
+    self.startButton.hidden = YES;
+    self.imageView1.hidden = self.imageView2.hidden = NO;
+    [NSTimer scheduledTimerWithTimeInterval:0.005f target:self selector:@selector(moveImageViews) userInfo:nil repeats:YES];
 }
 
 @end

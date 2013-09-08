@@ -12,10 +12,12 @@
 
 -(IBAction)button1Pressed:(id)sender;
 -(IBAction)button2Pressed:(id)sender;
+-(IBAction)startButtonPressed:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView1;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView2;
 @property (weak, nonatomic) IBOutlet UILabel *label1;
 @property (weak, nonatomic) IBOutlet UILabel *label2;
+@property (weak, nonatomic) IBOutlet UIButton *startButton;
 
 @end
