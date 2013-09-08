@@ -20,6 +20,7 @@
     NSTimer *theTimer;
     NSInteger stepCounter;
     NSArray *steps;
+    NSInteger score;
 }
 @end
 
@@ -148,12 +149,34 @@
         NSInteger targetType = [steps[targetIndex][@"type"] intValue];
     
         if (type == targetType) {
-            NSLog(@"OK");
-            CGFloat distance = nearestView.frame.origin.x - self.targetView.frame.origin.x;
+            //NSLog(@"OK");
+            CGFloat distance = abs(nearestView.frame.origin.x - self.targetView.frame.origin.x) / 5;
+            if(distance < 1) {
+                score += 100;
+                self.label1.text = @"Perfect!";
+            } else if(distance < 2) {
+                score += 60;
+                self.label1.text = @"Great!";
+            } else if(distance < 4) {
+                score += 30;
+                self.label1.text = @"Good";
+            } else {
+                self.label1.text = @"Bad";
+            }
+            
         } else {
-            NSLog(@"NG");            
+            //NSLog(@"NG");
+            self.label1.text = @"Bad";
         }
+        [self updateScoreLabel];
+        
+        [self performSelector:@selector(clearLabel:) withObject:self.label1 afterDelay:0.5];
     }
+}
+
+- (void)updateScoreLabel
+{
+    self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", score];
 }
 
 - (UIImageView*)findNearestImageView
