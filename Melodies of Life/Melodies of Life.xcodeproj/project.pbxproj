@@ -26,6 +26,7 @@
 		0D07F47317DBEEC00032FEBE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D07F47217DBEEC00032FEBE /* AVFoundation.framework */; };
 		0D07F47517DBF5FE0032FEBE /* DSC_0454_m.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D07F47417DBF5FE0032FEBE /* DSC_0454_m.jpg */; };
 		0D07F47717DBF6090032FEBE /* DSC_0459_m.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D07F47617DBF6090032FEBE /* DSC_0459_m.jpg */; };
+		693E6A5317DC475D0041CDEB /* GmUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 699D9C8D17DC42A10047B18A /* GmUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,8 @@
 		0D07F47217DBEEC00032FEBE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0D07F47417DBF5FE0032FEBE /* DSC_0454_m.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DSC_0454_m.jpg; sourceTree = "<group>"; };
 		0D07F47617DBF6090032FEBE /* DSC_0459_m.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DSC_0459_m.jpg; sourceTree = "<group>"; };
+		699D9C8D17DC42A10047B18A /* GmUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GmUtil.m; sourceTree = "<group>"; };
+		699D9C8E17DC42A10047B18A /* GmUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GmUtil.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,8 @@
 				0D07F45F17DBE6590032FEBE /* MainStoryboard_iPad.storyboard */,
 				0D07F46217DBE6590032FEBE /* ViewController.h */,
 				0D07F46317DBE6590032FEBE /* ViewController.m */,
+				699D9C8D17DC42A10047B18A /* GmUtil.m */,
+				699D9C8E17DC42A10047B18A /* GmUtil.h */,
 				0D07F44B17DBE6580032FEBE /* Supporting Files */,
 			);
 			path = "Melodies of Life";
@@ -205,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				693E6A5317DC475D0041CDEB /* GmUtil.m in Sources */,
 				0D07F45117DBE6590032FEBE /* main.m in Sources */,
 				0D07F45517DBE6590032FEBE /* AppDelegate.m in Sources */,
 				0D07F46417DBE6590032FEBE /* ViewController.m in Sources */,
@@ -340,6 +346,7 @@
 				0D07F46917DBE6590032FEBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -35,7 +35,7 @@
     NSDictionary *d = [util getVehiclesDataWithOffset:0 size:2];
     NSLog(@"%@", [d description]);
     
-    NSDictionary *d2 = [util invokeVehicleCommand:@"alert"];
+    NSDictionary *d2 = [util invokeVehicleCommand:@"lockDoor"];
     NSLog(@"%@", [d2 description]);
 }
 

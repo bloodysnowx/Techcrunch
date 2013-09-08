@@ -6,12 +6,14 @@
 //  Copyright (c) 2013年 BIGLOBE. All rights reserved.
 //
 
+#import "GmUtil.h"
 #import "ViewController.h"
 
 @interface ViewController ()
 {
     AVAudioPlayer* player;
     NSMutableArray* imageViews;
+    GmUtil *gmUtil;
 }
 @end
 
@@ -44,12 +46,14 @@
 {
     [self play:@"0645" WillDelegate:NO];
     [self judgePoint:self.imageView1 label:self.label1];
+    [self playHorn];
 }
 
 -(IBAction)button2Pressed:(id)sender
 {
     [self play:@"horn1" WillDelegate:NO];
     [self judgePoint:self.imageView2 label:self.label2];
+    [self playHorn];
 }
 
 -(void)judgePoint:(UIImageView*)imageView label:(UILabel*)label
@@ -68,7 +72,7 @@
 {
     label.text = @"";
 }
-
+	
 -(void)moveImageView:(UIImageView*)imageView
 {
     int x = imageView.frame.origin.x - 2;
@@ -85,6 +89,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    gmUtil = [[GmUtil alloc] initAndGetToken];
 }
 
 -(void)countDown:(NSNumber*)count
@@ -103,6 +108,11 @@
 -(IBAction)startButtonPressed:(id)sender
 {
     [self countDown:@3];
+}
+
+- (void)playHorn
+{
+    [gmUtil invokeVehicleCommand:@"alert"];
 }
 
 @end
