@@ -146,7 +146,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" alpha="0.70000000000000007" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pjb-o2-3vL">
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pjb-o2-3vL">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="189" id="Gmg-gm-Bmx"/>
                                     <constraint firstAttribute="height" constant="135" id="Xhv-2h-mOY"/>
@@ -163,7 +163,7 @@
                                     <action selector="button1Pressed:" destination="2" eventType="touchUpInside" id="bGf-DK-ht5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.70000000000000007" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oq-eF-eQa">
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oq-eF-eQa">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="189" id="itp-ZM-OcV"/>
                                 </constraints>
