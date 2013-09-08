@@ -44,17 +44,37 @@
                                     <action selector="button2Pressed:" destination="2" eventType="touchUpInside" id="pMS-jq-Q1L"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="DSC_0459_m.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hNO-dd-79B">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="132" id="GeY-aO-rIH"/>
+                                    <constraint firstAttribute="height" constant="74" id="fs0-kc-Ex6"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="DSC_0454_m.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="2jc-BW-auL">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="132" id="91Q-Lr-DMQ"/>
+                                    <constraint firstAttribute="height" constant="71" id="mVG-Zi-w3S"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="6oq-eF-eQa" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="9GC-pr-jvi"/>
-                            <constraint firstItem="6oq-eF-eQa" firstAttribute="top" secondItem="3" secondAttribute="top" constant="224" id="D2i-gE-re1"/>
+                            <constraint firstAttribute="trailing" secondItem="hNO-dd-79B" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="9ih-o1-r80"/>
                             <constraint firstItem="Pjb-o2-3vL" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="EDX-xH-M5m"/>
-                            <constraint firstItem="Pjb-o2-3vL" firstAttribute="top" secondItem="3" secondAttribute="top" constant="33" id="PTe-22-gXa"/>
+                            <constraint firstAttribute="bottom" secondItem="2jc-BW-auL" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="OQn-wf-3WE"/>
                             <constraint firstItem="6oq-eF-eQa" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="QfP-hX-ASd"/>
+                            <constraint firstItem="6oq-eF-eQa" firstAttribute="top" secondItem="3" secondAttribute="top" constant="198" id="Tqh-7d-VqG"/>
+                            <constraint firstItem="2jc-BW-auL" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="48" id="eD1-r3-0hY"/>
+                            <constraint firstItem="2jc-BW-auL" firstAttribute="top" secondItem="hNO-dd-79B" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="gPQ-w2-plJ"/>
+                            <constraint firstItem="Pjb-o2-3vL" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="hGR-Sp-bml"/>
                             <constraint firstAttribute="trailing" secondItem="Pjb-o2-3vL" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="lNL-aJ-Wlq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView1" destination="hNO-dd-79B" id="FKD-s3-2hi"/>
+                        <outlet property="imageView2" destination="2jc-BW-auL" id="AnF-3d-cnl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
@@ -62,7 +82,9 @@
     </scenes>
     <resources>
         <image name="DSC_0454.jpg" width="3208" height="1732"/>
+        <image name="DSC_0454_m.jpg" width="280" height="151"/>
         <image name="DSC_0459.jpg" width="3920" height="2204"/>
+        <image name="DSC_0459_m.jpg" width="280" height="157"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

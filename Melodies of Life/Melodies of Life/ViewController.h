@@ -13,4 +13,7 @@
 -(IBAction)button1Pressed:(id)sender;
 -(IBAction)button2Pressed:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageView1;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView2;
+
 @end
